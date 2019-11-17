@@ -1,0 +1,357 @@
+.OsnovnoyBlock{
+    //border: 0.5px solid black;
+   //background-color: #2a6478;
+	background-image: url("../image/trianglify-lowres.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+    padding: 5px; 
+	
+	/*Задал блоку фиксированные размеры, чтобы не париться с гибкостью*/
+	width: 1300px;
+    max-width: 1300px;
+	
+	/*Расположил блок по центру экрана*/
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.FlexDiv1{
+ display: flex;
+ justify-content: space-between;
+ align-content: flex-start;
+ flex-wrap: wrap;
+}
+
+.IsDan{
+ margin-left: -2px;
+}
+
+.Avtor11{	
+    //background-color: #004524;
+ 
+}
+
+.ParamRS{
+ width: 49%;	
+ 
+}
+
+.IsxDanPotoka1{
+ width: 100%;	
+ margin-top: 5px;
+ margin-bottom: 5px;
+
+}
+
+.IsxDanStyp1{
+ width: 100%;
+}
+
+.grpelem1{
+ display: flex;
+ justify-content: space-around;
+}
+
+.NameProj1{
+ width: 300px;
+ margin-bottom: 15px;
+}
+
+.disFlex{
+ display: flex;
+ justify-content: space-around;
+}
+
+.FormColor{
+ background-color: #a2a2d0;
+}
+.IsDan2 {
+    margin-top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+}
+
+
+
+.Avtor1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+    width: 49%;
+}
+
+.Avtor111 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+
+.Avtor112 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.Avtor113 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.FlexAvtor {
+ display: flex;
+ justify-content: space-between;
+}
+
+.NameProj2 {
+	width: 150px;
+	margin-bottom: 15px;
+}
+
+.Tyrb {
+	width: 150px;
+}
+
+.Razrab {
+	width: 150px;
+}
+
+.SPANtyrb {
+	vertical-align: bottom;
+	margin-left: 50px;
+}
+
+.SPANproj {
+	vertical-align: bottom;
+	margin-bottom: 15px;
+}
+
+.SPANrazrab {
+	vertical-align: bottom;
+}
+
+
+
+.SPANbolt {
+	font-weight: 700;
+}
+
+.ParamRS11 {
+	display: flex;
+	justify-content: space-around;
+}
+
+.bodyParam {
+	font-size: 16px;
+}
+
+.TipRegStyp {
+	flex-grow: 1;
+}
+
+.DopParRS {
+	flex-grow: 1;
+}
+
+.ParamRS1 {
+   padding-top: 0px;
+   //background-color: #61C6EB;
+}
+
+.ChisloNRS {
+	width: 15px;
+}
+
+.ChastotaVrashenia {
+	width: 15px;
+}
+
+.StatEntalPerOts {
+	width: 35px;
+}
+
+
+
+.IsxDanPotoka111 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.StatDavPerOts {
+	width: 35px;
+}
+
+.StatDavZaOtsekom {
+	width: 35px;
+}
+
+.IsxDanPotoka1111 {
+	 flex-shrink: 0;
+}
+
+.IsxDanPotoka1112 {
+	margin-left: auto;
+	flex-shrink: 0;
+}
+
+.IsxDanPotoka1113 {
+	margin-left: 10px;
+	margin-right: auto;
+	flex-shrink: 0; /*Флекс элемент не уменьшается в размерах*/
+}
+
+.IsxDanPotoka1114 {
+	margin-left: auto;
+	margin-right: auto;
+	flex-shrink: 0;
+}
+
+.IsxDanPotoka1115 {
+	margin-left: auto;
+	margin-right: auto;
+	flex-shrink: 0;
+}
+
+input:focus{
+	background-color: #F7B1B3;
+}
+
+.IsxDanPotoka11 {
+	//background-color: #5d9b9b;
+	flex-shrink: 0;
+}
+
+.Tabliza1 {
+	display: block;
+	width: 1250px;
+	overflow: auto;
+}
+
+tr, td {
+	border: 1px solid black;
+	height: 26px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.Tabliza2 {
+	margin: 0px;
+	max-width: 100%;
+}
+
+.TDTabl2 {
+	vertical-align: top;
+	padding: 0px;
+}
+
+.LeftTop1, .LeftTop2{
+	border-top: 0px;
+	border-left: 0px;
+}
+
+
+
+.Top {
+	border-top: 0px;
+}
+
+.RightTop {
+	border-top: 0px;
+	border-right: 0px;
+}
+
+.Left {
+	border-left: 0px;
+}
+
+.LeftBottom {
+	border-left: 0px;
+	border-bottom: 0px;
+}
+
+.Bottom {
+	border-bottom: 0px;
+}
+
+.RightBottom {
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+.Size1{
+	height: 26px;
+}
+
+
+
+.RasxParaCherezStyp1 {
+}
+
+.SizeInput{
+	display: block;
+	width: 100%;
+	max-width: 40px;
+	height: 100%;
+	border: 0px;
+}
+
+.Size2 {
+	min-width: 40px;
+}
+
+
+
+.DivTabl2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.SizeNumber {
+	min-width: 10px;
+}
+
+.Naimenovanie {
+	min-width: 320px; 
+}
+
+.Oboznachenie {
+	min-width: 90px;
+}
+
+.EdinicaIzmerenia {
+	min-width: 140px;
+}
+
+
+
+.IsxDanStyp11 {
+	//background-color: grey;
+}
+
+.TextAlign {
+	text-align: center;
+}
+
+.Fon {
+	margin: 0px;
+	padding: 0px;
+	background-image: url("");
+}
+
+.Shadow{
+	display: none;
+}
+
+.InpColor {
+	background-color: brown;
+}

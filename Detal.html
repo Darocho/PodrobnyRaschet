@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Детальный расчёт</title>
+    <link rel="stylesheet" href="CSS/Detal.css">
+  </head>
+
+	
+  <body class="bodyParam"> 
+   <div class="Fon"><!--Фон-->
+    <div class="OsnovnoyBlock">
+	 <fieldset class="IsDan2">
+	  <legend class="SPANbolt">Исходные данные:</legend>
+      
+
+     <div class="FlexDiv1">
+      
+		 
+	  <div class="Avtor1">
+	   <fieldset class="Avtor11">
+        <legend class="SPANbolt">Автор</legend>
+		  <div class="FlexAvtor">
+		   
+		   <div class="Avtor111">
+		     <span class="SPANproj">ПРОЕКТ</span>
+			 <span class="SPANrazrab">РАЗРАБОТЧИК</span>
+		   </div>
+		   
+		   <div class="Avtor112">
+		     <form name="input">
+				 <input type="text" value="Подробный расчёт турбины (цилиндра, отсека)" name="NameProj1" class="NameProj1">
+				 <input type="text" value="Тестовый пример" name="Razrab" class="Razrab">
+				 <span class="SPANtyrb">ТУРБИНА</span>
+			 </form>
+		   </div>
+		   
+		   	<div class="Avtor113">
+		     <form name="input">
+				 <input type="text" value="Курсовой проект" name="NameProj2" class="NameProj2">
+				 <input type="text" value="Паровая турбина" name="Tyrb" class="Tyrb">
+			 </form>
+		   </div>
+		   
+       
+		 </div>
+       </fieldset>
+	  </div>	 
+		
+		 
+		 
+      <div class="ParamRS">
+		<fieldset class="ParamRS1">
+		 <legend class="SPANbolt">Параметры регулирующей ступени</legend>
+		  <div class="ParamRS11">
+			
+			  
+			 <fieldset class="TipRegStyp">
+			  <legend class="SPANbolt">Тип регулирующей ступени</legend>
+				 <form name="input">
+				   <input type="radio" name="RS" class="RSnet" checked>РС нет<br>
+				   <input type="radio" name="RS" class="OdnovenStyp">Одновенечная рс
+				 </form>
+			 </fieldset>
+			
+			 <fieldset class="DopParRS">
+			  <legend class="SPANbolt">Дополнительные параметры РС</legend>
+			 </fieldset>
+			
+			  
+		  </div>
+		</fieldset>
+      </div>
+
+		 
+		 
+		 
+		 
+      <div class="IsxDanPotoka1">
+       <fieldset class="IsxDanPotoka11">
+		 <legend class="SPANbolt">Исходные данные по потоку</legend>
+		  <div class="IsxDanPotoka111">
+		   
+		   <div class="IsxDanPotoka1111">
+		    <form name="input">
+			  <label for="ChisloNRS1">Число НРС</label>
+			  <input type="text" name="ChisloNRS" class="ChisloNRS" id="ChisloNRS1" value="20">
+			  <input type="submit" name="submit" class="submitNRS" value="Ок"><br>
+			  <label for="ChastotaVrashenia1">Частота вращения ротора</label>
+			  <input type="text" name="ChastotaVrashenia" class="ChastotaVrashenia" id="ChastotaVrashenia1" value="50">
+			</form>
+		   </div>
+		   
+		   <div class="IsxDanPotoka1112">
+		    <span>Статическая энтальпия перед отсеком</span><br>
+			<span>Статическое давление перед отсеком</span><br>
+			<span>Статическое давление за отсеком</span>
+		   </div>
+		   
+		   <div class="IsxDanPotoka1113">
+		    <form name="input">
+			   <input type="text" name="StatEntalPerOts" class="StatEntalPerOts" id="StatEntalPerOts1" value="3303">
+			  <label for="StatEntalPerOts1">КДж/кг</label><br>
+			   <input type="text" name="StatDavPerOts" class="StatDavPerOts" id="StatDavPerOts1" value="157.4">
+			  <label for="StatDavPerOts1">бар</label><br>
+			   <input type="text" name="StatDavZaOtsekom" class="StatDavZaOtsekom" id="StatDavZaOtsekom1" value="34">
+			  <label for="StatDavZaOtsekom1">бар</label>
+			</form>
+		   </div>
+		   
+		   <fieldset class="IsxDanPotoka1114">
+			<legend class="SPANbolt">Режим расчёта</legend>
+			  <form name="input">
+				<input type="radio" name="RegRas1" class="RegRas1" checked>По тепловым перепадам<br>
+			    <input type="radio" name="RegRas1" class="RegRas2">По давлениям за ступенями
+			  </form>
+		   </fieldset>	  
+			  
+		   <fieldset class="IsxDanPotoka1115">
+			<legend class="SPANbolt">Режим расчёта</legend>
+			  <form name="input">
+				<input type="radio" name="RegRas2" class="RegRas3" checked>По углам выхода потока из решёток<br>
+			    <input type="radio" name="RegRas2" class="RegRas4">По высотам лопаток
+			  </form>
+		   </fieldset>	  
+			  
+		</div>
+	   </fieldset>
+      </div>
+
+		 
+		 
+		 
+		 
+      <div class="IsxDanStyp1">
+	  <fieldset class="IsxDanStyp11">
+		<legend class="SPANbolt">Исходные данные по ступеням</legend>
+		   
+		  <div class="DivTabl2"><!--Блок для задания скролла-->
+        <table class="Tabliza1">
+		  <tr><!--Строка оглавления-->
+			  <td class="Size1 SizeNumber">
+			  </td>
+			  <td class="Naimenovanie TextAlign">
+			      Наименование параметра
+			  </td>
+			  <td class="Oboznachenie">
+				  Обозначение
+			  </td>
+			  <td class="EdinicaIzmerenia">
+				  Единица измерения
+			  </td>
+			  
+			  
+			 
+			  <td rowspan="22" class="TDTabl2"><!--Таблица внутри таблицы, для полей ввода данных-->
+				<table class="Tabliza2">
+					<tr class="LeftTop1 RightTop"><!--Строка оглавления-->
+						<td class="tdRS0 LeftTop2 Size1 Size2 TextAlign Shadow"><!--Скрытый блок 1РС-->
+							1 РС
+						</td>
+						<td class="tr0td1 LeftTop2 Size1 Size2 TextAlign">
+							1
+						</td>
+						<td class="tr0td2 Top Size2 TextAlign">
+							2
+						</td>
+						<td class="tr0td3 Top Size2 TextAlign">
+							3
+						</td>
+						<td class="tr0td4 Top Size2 TextAlign">
+							4
+						</td>
+						<td class="tr0td5 Top Size2 TextAlign">
+							5
+						</td>
+						<td class="tr0td6 Top Size2 TextAlign">
+							6
+						</td>
+						<td class="tr0td7 Top Size2 TextAlign">
+							7
+						</td>
+						<td class="tr0td8 Top Size2 TextAlign">
+							8
+						</td>
+						<td class="tr0td9 Top Size2 TextAlign">
+							9
+						</td>
+						<td class="tr0td10 Top Size2 TextAlign">
+							10
+						</td>
+						<td class="tr0td11 Top Size2 TextAlign">
+							11
+						</td>
+						<td class="tr0td12 Top Size2 TextAlign">
+							12
+						</td>
+						<td class="tr0td13 Top Size2 TextAlign">
+							13
+						</td>
+						<td class="tr0td14 Top Size2 TextAlign">
+							14
+						</td>
+						<td class="tr0td15 Top Size2 TextAlign">
+							15
+						</td>
+						<td class="tr0td16 Top Size2 TextAlign">
+							16
+						</td>
+						<td class="tr0td17 Top Size2 TextAlign">
+							17
+						</td>
+						<td class="tr0td18 Top Size2 TextAlign">
+							18
+						</td>
+						<td class="tr0td19 Top Size2 TextAlign">
+							19
+						</td>
+						<td class="tr0td20 RightTop Size2 TextAlign">
+							20
+						</td>
+					</tr>
+					
+				   <form name="input">	
+					<tr class="Left">
+						<td class="tdRS1 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="RasxParaCherezStyp0" class="RasxParaCherezStyp0 SizeInput InpColor">
+						</td>
+						<td class="tr1td1 Left Size1">
+							<input type="text" name="RasxParaCherezStyp1" class="RasxParaCherezStyp1 SizeInput">
+						</td>
+						<td class="tr1td2">
+							<input type="text" name="RasxParaCherezStyp2" class="RasxParaCherezStyp2 SizeInput">
+						</td>
+						<td class="tr1td3">
+							<input type="text" name="RasxParaCherezStyp3" class="RasxParaCherezStyp3 SizeInput">
+						</td>
+						<td class="tr1td4">
+							<input type="text" name="RasxParaCherezStyp4" class="RasxParaCherezStyp4 SizeInput">
+						</td>
+						<td class="tr1td5">
+							<input type="text" name="RasxParaCherezStyp5" class="RasxParaCherezStyp5 SizeInput">
+						</td>
+						<td class="tr1td6">
+							<input type="text" name="RasxParaCherezStyp6" class="RasxParaCherezStyp6 SizeInput">
+						</td>
+						<td class="tr1td7">
+							<input type="text" name="RasxParaCherezStyp7" class="RasxParaCherezStyp7 SizeInput">
+						</td>
+						<td class="tr1td8">
+							<input type="text" name="RasxParaCherezStyp8" class="RasxParaCherezStyp8 SizeInput">
+						</td>
+						<td class="tr1td9">
+							<input type="text" name="RasxParaCherezStyp9" class="RasxParaCherezStyp9 SizeInput">
+						</td>
+						<td class="tr1td10">
+							<input type="text" name="RasxParaCherezStyp10" class="RasxParaCherezStyp10 SizeInput">
+						</td>
+						<td class="tr1td11">
+							<input type="text" name="RasxParaCherezStyp11" class="RasxParaCherezStyp11 SizeInput">
+						</td>
+						<td class="tr1td12">
+							<input type="text" name="RasxParaCherezStyp12" class="RasxParaCherezStyp12 SizeInput">
+						</td>
+						<td class="tr1td13">
+							<input type="text" name="RasxParaCherezStyp13" class="RasxParaCherezStyp13 SizeInput">
+						</td>
+						<td class="tr1td14">
+							<input type="text" name="RasxParaCherezStyp14" class="RasxParaCherezStyp14 SizeInput">
+						</td>
+						<td class="tr1td15">
+							<input type="text" name="RasxParaCherezStyp15" class="RasxParaCherezStyp15 SizeInput">
+						</td>
+						<td class="tr1td16">
+							<input type="text" name="RasxParaCherezStyp16" class="RasxParaCherezStyp16 SizeInput">
+						</td>
+						<td class="tr1td17">
+							<input type="text" name="RasxParaCherezStyp17" class="RasxParaCherezStyp17 SizeInput">
+						</td>
+						<td class="tr1td18">
+							<input type="text" name="RasxParaCherezStyp18" class="RasxParaCherezStyp18 SizeInput">
+						</td>
+						<td class="tr1td19">
+							<input type="text" name="RasxParaCherezStyp19" class="RasxParaCherezStyp19 SizeInput">
+						</td>
+						<td class="tr1td20">
+							<input type="text" name="RasxParaCherezStyp20" class="RasxParaCherezStyp20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS2 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="TeplovPerepStyp0" class="TeplovPerepStyp0 SizeInput InpColor">
+							<input type="text" name="DavlenieZaStypen0" class="DavlenieZaStypen0 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td1 Left Size1">
+							<input type="text" name="TeplovPerepStyp1" class="TeplovPerepStyp1 SizeInput">
+							<input type="text" name="DavlenieZaStypen1" class="DavlenieZaStypen1 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td2">
+							<input type="text" name="TeplovPerepStyp2" class="TeplovPerepStyp2 SizeInput">
+							<input type="text" name="DavlenieZaStypen2" class="DavlenieZaStypen2 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td3">
+							<input type="text" name="TeplovPerepStyp3" class="TeplovPerepStyp3 SizeInput">
+							<input type="text" name="DavlenieZaStypen3" class="DavlenieZaStypen3 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td4">
+							<input type="text" name="TeplovPerepStyp4" class="TeplovPerepStyp4 SizeInput">
+							<input type="text" name="DavlenieZaStypen4" class="DavlenieZaStypen4 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td5">
+							<input type="text" name="TeplovPerepStyp5" class="TeplovPerepStyp5 SizeInput">
+							<input type="text" name="DavlenieZaStypen5" class="DavlenieZaStypen5 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td6">
+							<input type="text" name="TeplovPerepStyp6" class="TeplovPerepStyp6 SizeInput">
+							<input type="text" name="DavlenieZaStypen6" class="DavlenieZaStypen6 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td7">
+							<input type="text" name="TeplovPerepStyp7" class="TeplovPerepStyp7 SizeInput">
+							<input type="text" name="DavlenieZaStypen7" class="DavlenieZaStypen7 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td8">
+							<input type="text" name="TeplovPerepStyp8" class="TeplovPerepStyp8 SizeInput">
+							<input type="text" name="DavlenieZaStypen8" class="DavlenieZaStypen8 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td9">
+							<input type="text" name="TeplovPerepStyp9" class="TeplovPerepStyp9 SizeInput">
+							<input type="text" name="DavlenieZaStypen9" class="DavlenieZaStypen9 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td10">
+							<input type="text" name="TeplovPerepStyp10" class="TeplovPerepStyp10 SizeInput">
+							<input type="text" name="DavlenieZaStypen10" class="DavlenieZaStypen10 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td11">
+							<input type="text" name="TeplovPerepStyp11" class="TeplovPerepStyp11 SizeInput">
+							<input type="text" name="DavlenieZaStypen11" class="DavlenieZaStypen11 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td12">
+							<input type="text" name="TeplovPerepStyp12" class="TeplovPerepStyp12 SizeInput">
+							<input type="text" name="DavlenieZaStypen12" class="DavlenieZaStypen12 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td13">
+							<input type="text" name="TeplovPerepStyp13" class="TeplovPerepStyp13 SizeInput">
+							<input type="text" name="DavlenieZaStypen13" class="DavlenieZaStypen13 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td14">
+							<input type="text" name="TeplovPerepStyp14" class="TeplovPerepStyp14 SizeInput">
+							<input type="text" name="DavlenieZaStypen14" class="DavlenieZaStypen14 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td15">
+							<input type="text" name="TeplovPerepStyp15" class="TeplovPerepStyp15 SizeInput">
+							<input type="text" name="DavlenieZaStypen15" class="DavlenieZaStypen15 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td16">
+							<input type="text" name="TeplovPerepStyp16" class="TeplovPerepStyp16 SizeInput">
+							<input type="text" name="DavlenieZaStypen16" class="DavlenieZaStypen16 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td17">
+							<input type="text" name="TeplovPerepStyp17" class="TeplovPerepStyp17 SizeInput">
+							<input type="text" name="DavlenieZaStypen17" class="DavlenieZaStypen17 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td18">
+							<input type="text" name="TeplovPerepStyp18" class="TeplovPerepStyp18 SizeInput">
+							<input type="text" name="DavlenieZaStypen18" class="DavlenieZaStypen18 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td19">
+							<input type="text" name="TeplovPerepStyp19" class="TeplovPerepStyp19 SizeInput">
+							<input type="text" name="DavlenieZaStypen19" class="DavlenieZaStypen19 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr2td20">
+							<input type="text" name="TeplovPerepStyp20" class="TeplovPerepStyp20 SizeInput">
+							<input type="text" name="DavlenieZaStypen20" class="DavlenieZaStypen20 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS3 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ParcialnStypeni0" class="ParcialnStypeni0 SizeInput InpColor">
+						</td>
+						<td class="tr3td1 Left Size1">
+							<input type="text" name="ParcialnStypeni1" class="ParcialnStypeni1 SizeInput">
+						</td>
+						<td class="tr3td2">
+							<input type="text" name="ParcialnStypeni2" class="ParcialnStypeni2 SizeInput">
+						</td>
+						<td class="tr3td3">
+							<input type="text" name="ParcialnStypeni3" class="ParcialnStypeni3 SizeInput">
+						</td>
+						<td class="tr3td4">
+							<input type="text" name="ParcialnStypeni4" class="ParcialnStypeni4 SizeInput">
+						</td>
+						<td class="tr3td5">
+							<input type="text" name="ParcialnStypeni5" class="ParcialnStypeni5 SizeInput">
+						</td>
+						<td class="tr3td6">
+							<input type="text" name="ParcialnStypeni6" class="ParcialnStypeni6 SizeInput">
+						</td>
+						<td class="tr3td7">
+							<input type="text" name="ParcialnStypeni7" class="ParcialnStypeni7 SizeInput">
+						</td>
+						<td class="tr3td8">
+							<input type="text" name="ParcialnStypeni8" class="ParcialnStypeni8 SizeInput">
+						</td>
+						<td class="tr3td9">
+							<input type="text" name="ParcialnStypeni9" class="ParcialnStypeni9 SizeInput">
+						</td>
+						<td class="tr3td10">
+							<input type="text" name="ParcialnStypeni10" class="ParcialnStypeni10 SizeInput">
+						</td>
+						<td class="tr3td11">
+							<input type="text" name="ParcialnStypeni11" class="ParcialnStypeni11 SizeInput">
+						</td>
+						<td class="tr3td12">
+							<input type="text" name="ParcialnStypeni12" class="ParcialnStypeni12 SizeInput">
+						</td>
+						<td class="tr3td13">
+							<input type="text" name="ParcialnStypeni13" class="ParcialnStypeni13 SizeInput">
+						</td>
+						<td class="tr3td14">
+							<input type="text" name="ParcialnStypeni14" class="ParcialnStypeni14 SizeInput">
+						</td>
+						<td class="tr3td15">
+							<input type="text" name="ParcialnStypeni15" class="ParcialnStypeni15 SizeInput">
+						</td>
+						<td class="tr3td16">
+							<input type="text" name="ParcialnStypeni16" class="ParcialnStypeni16 SizeInput">
+						</td>
+						<td class="tr3td17">
+							<input type="text" name="ParcialnStypeni17" class="ParcialnStypeni17 SizeInput">
+						</td>
+						<td class="tr3td18">
+							<input type="text" name="ParcialnStypeni18" class="ParcialnStypeni18 SizeInput">
+						</td>
+						<td class="tr3td19">
+							<input type="text" name="ParcialnStypeni19" class="ParcialnStypeni19 SizeInput">
+						</td>
+						<td class="tr3td20">
+							<input type="text" name="ParcialnStypeni20" class="ParcialnStypeni20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS4 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="OtnoshenieSkorost0" class="OtnoshenieSkorost0 SizeInput InpColor">
+						</td>
+						<td class="tr4td1 Left Size1">
+							<input type="text" name="OtnoshenieSkorost1" class="OtnoshenieSkorost1 SizeInput">
+						</td>
+						<td class="tr4td2">
+							<input type="text" name="OtnoshenieSkorost2" class="OtnoshenieSkorost2 SizeInput">
+						</td>
+						<td class="tr4td3">
+							<input type="text" name="OtnoshenieSkorost3" class="OtnoshenieSkorost3 SizeInput">
+						</td>
+						<td class="tr4td4">
+							<input type="text" name="OtnoshenieSkorost4" class="OtnoshenieSkorost4 SizeInput">
+						</td>
+						<td class="tr4td5">
+							<input type="text" name="OtnoshenieSkorost5" class="OtnoshenieSkorost5 SizeInput">
+						</td>
+						<td class="tr4td6">
+							<input type="text" name="OtnoshenieSkorost6" class="OtnoshenieSkorost6 SizeInput">
+						</td>
+						<td class="tr4td7">
+							<input type="text" name="OtnoshenieSkorost7" class="OtnoshenieSkorost7 SizeInput">
+						</td>
+						<td class="tr4td8">
+							<input type="text" name="OtnoshenieSkorost8" class="OtnoshenieSkorost8 SizeInput">
+						</td>
+						<td class="tr4td9">
+							<input type="text" name="OtnoshenieSkorost9" class="OtnoshenieSkorost9 SizeInput">
+						</td>
+						<td class="tr4td10">
+							<input type="text" name="OtnoshenieSkorost10" class="OtnoshenieSkorost10 SizeInput">
+						</td>
+						<td class="tr4td11">
+							<input type="text" name="OtnoshenieSkorost11" class="OtnoshenieSkorost11 SizeInput">
+						</td>
+						<td class="tr4td12">
+							<input type="text" name="OtnoshenieSkorost12" class="OtnoshenieSkorost12 SizeInput">
+						</td>
+						<td class="tr4td13">
+							<input type="text" name="OtnoshenieSkorost13" class="OtnoshenieSkorost13 SizeInput">
+						</td>
+						<td class="tr4td14">
+							<input type="text" name="OtnoshenieSkorost14" class="OtnoshenieSkorost14 SizeInput">
+						</td>
+						<td class="tr4td15">
+							<input type="text" name="OtnoshenieSkorost15" class="OtnoshenieSkorost15 SizeInput">
+						</td>
+						<td class="tr4td16">
+							<input type="text" name="OtnoshenieSkorost16" class="OtnoshenieSkorost16 SizeInput">
+						</td>
+						<td class="tr4td17">
+							<input type="text" name="OtnoshenieSkorost17" class="OtnoshenieSkorost17 SizeInput">
+						</td>
+						<td class="tr4td18">
+							<input type="text" name="OtnoshenieSkorost18" class="OtnoshenieSkorost18 SizeInput">
+						</td>
+						<td class="tr4td19">
+							<input type="text" name="OtnoshenieSkorost19" class="OtnoshenieSkorost19 SizeInput">
+						</td>
+						<td class="tr4td20">
+							<input type="text" name="OtnoshenieSkorost20" class="OtnoshenieSkorost20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS5 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="SredDiametrSL0" class="SredDiametrSL0 SizeInput InpColor">
+						</td>
+						<td class="tr5td1 Left Size1">
+							<input type="text" name="SredDiametrSL1" class="SredDiametrSL1 SizeInput">
+						</td>
+						<td class="tr5td2">
+							<input type="text" name="SredDiametrSL2" class="SredDiametrSL2 SizeInput">
+						</td>
+						<td class="tr5td3">
+							<input type="text" name="SredDiametrSL3" class="SredDiametrSL3 SizeInput">
+						</td>
+						<td class="tr5td4">
+							<input type="text" name="SredDiametrSL4" class="SredDiametrSL4 SizeInput">
+						</td>
+						<td class="tr5td5">
+							<input type="text" name="SredDiametrSL5" class="SredDiametrSL5 SizeInput">
+						</td>
+						<td class="tr5td6">
+							<input type="text" name="SredDiametrSL6" class="SredDiametrSL6 SizeInput">
+						</td>
+						<td class="tr5td7">
+							<input type="text" name="SredDiametrSL7" class="SredDiametrSL7 SizeInput">
+						</td>
+						<td class="tr5td8">
+							<input type="text" name="SredDiametrSL8" class="SredDiametrSL8 SizeInput">
+						</td>
+						<td class="tr5td9">
+							<input type="text" name="SredDiametrSL9" class="SredDiametrSL9 SizeInput">
+						</td>
+						<td class="tr5td10">
+							<input type="text" name="SredDiametrSL10" class="SredDiametrSL10 SizeInput">
+						</td>
+						<td class="tr5td11">
+							<input type="text" name="SredDiametrSL11" class="SredDiametrSL11 SizeInput">
+						</td>
+						<td class="tr5td12">
+							<input type="text" name="SredDiametrSL12" class="SredDiametrSL12 SizeInput">
+						</td>
+						<td class="tr5td13">
+							<input type="text" name="SredDiametrSL13" class="SredDiametrSL13 SizeInput">
+						</td>
+						<td class="tr5td14">
+							<input type="text" name="SredDiametrSL14" class="SredDiametrSL14 SizeInput">
+						</td>
+						<td class="tr5td15">
+							<input type="text" name="SredDiametrSL15" class="SredDiametrSL15 SizeInput">
+						</td>
+						<td class="tr5td16">
+							<input type="text" name="SredDiametrSL16" class="SredDiametrSL16 SizeInput">
+						</td>
+						<td class="tr5td17">
+							<input type="text" name="SredDiametrSL17" class="SredDiametrSL17 SizeInput">
+						</td>
+						<td class="tr5td18">
+							<input type="text" name="SredDiametrSL18" class="SredDiametrSL18 SizeInput">
+						</td>
+						<td class="tr5td19">
+							<input type="text" name="SredDiametrSL19" class="SredDiametrSL19 SizeInput">
+						</td>
+						<td class="tr5td20">
+							<input type="text" name="SredDiametrSL20" class="SredDiametrSL20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS6 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="SredDiametrRL0" class="SredDiametrRL0 SizeInput InpColor">
+						</td>
+						<td class="tr6td1 Left Size1">
+							<input type="text" name="SredDiametrRL1" class="SredDiametrRL1 SizeInput">
+						</td>
+						<td class="tr6td2">
+							<input type="text" name="SredDiametrRL2" class="SredDiametrRL2 SizeInput">
+						</td>
+						<td class="tr6td3">
+							<input type="text" name="SredDiametrRL3" class="SredDiametrRL3 SizeInput">
+						</td>
+						<td class="tr6td4">
+							<input type="text" name="SredDiametrRL4" class="SredDiametrRL4 SizeInput">
+						</td>
+						<td class="tr6td5">
+							<input type="text" name="SredDiametrRL5" class="SredDiametrRL5 SizeInput">
+						</td>
+						<td class="tr6td6">
+							<input type="text" name="SredDiametrRL6" class="SredDiametrRL6 SizeInput">
+						</td>
+						<td class="tr6td7">
+							<input type="text" name="SredDiametrRL7" class="SredDiametrRL7 SizeInput">
+						</td>
+						<td class="tr6td8">
+							<input type="text" name="SredDiametrRL8" class="SredDiametrRL8 SizeInput">
+						</td>
+						<td class="tr6td9">
+							<input type="text" name="SredDiametrRL9" class="SredDiametrRL9 SizeInput">
+						</td>
+						<td class="tr6td10">
+							<input type="text" name="SredDiametrRL10" class="SredDiametrRL10 SizeInput">
+						</td>
+						<td class="tr6td11">
+							<input type="text" name="SredDiametrRL11" class="SredDiametrRL11 SizeInput">
+						</td>
+						<td class="tr6td12">
+							<input type="text" name="SredDiametrRL12" class="SredDiametrRL12 SizeInput">
+						</td>
+						<td class="tr6td13">
+							<input type="text" name="SredDiametrRL13" class="SredDiametrRL13 SizeInput">
+						</td>
+						<td class="tr6td14">
+							<input type="text" name="SredDiametrRL14" class="SredDiametrRL14 SizeInput">
+						</td>
+						<td class="tr6td15">
+							<input type="text" name="SredDiametrRL15" class="SredDiametrRL15 SizeInput">
+						</td>
+						<td class="tr6td16">
+							<input type="text" name="SredDiametrRL16" class="SredDiametrRL16 SizeInput">
+						</td>
+						<td class="tr6td17">
+							<input type="text" name="SredDiametrRL17" class="SredDiametrRL17 SizeInput">
+						</td>
+						<td class="tr6td18">
+							<input type="text" name="SredDiametrRL18" class="SredDiametrRL18 SizeInput">
+						</td>
+						<td class="tr6td19">
+							<input type="text" name="SredDiametrRL19" class="SredDiametrRL19 SizeInput">
+						</td>
+						<td class="tr6td20">
+							<input type="text" name="SredDiametrRL20" class="SredDiametrRL20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS7 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="SrednStepenReakStyp0" class="SrednStepenReakStyp0 SizeInput InpColor">
+						</td>
+						<td class="tr7td1 Left Size1">
+							<input type="text" name="SrednStepenReakStyp1" class="SrednStepenReakStyp1 SizeInput">
+						</td>
+						<td class="tr7td2">
+							<input type="text" name="SrednStepenReakStyp2" class="SrednStepenReakStyp2 SizeInput">
+						</td>
+						<td class="tr7td3">
+							<input type="text" name="SrednStepenReakStyp3" class="SrednStepenReakStyp3 SizeInput">
+						</td>
+						<td class="tr7td4">
+							<input type="text" name="SrednStepenReakStyp4" class="SrednStepenReakStyp4 SizeInput">
+						</td>
+						<td class="tr7td5">
+							<input type="text" name="SrednStepenReakStyp5" class="SrednStepenReakStyp5 SizeInput">
+						</td>
+						<td class="tr7td6">
+							<input type="text" name="SrednStepenReakStyp6" class="SrednStepenReakStyp6 SizeInput">
+						</td>
+						<td class="tr7td7">
+							<input type="text" name="SrednStepenReakStyp7" class="SrednStepenReakStyp7 SizeInput">
+						</td>
+						<td class="tr7td8">
+							<input type="text" name="SrednStepenReakStyp8" class="SrednStepenReakStyp8 SizeInput">
+						</td>
+						<td class="tr7td9">
+							<input type="text" name="SrednStepenReakStyp9" class="SrednStepenReakStyp9 SizeInput">
+						</td>
+						<td class="tr7td10">
+							<input type="text" name="SrednStepenReakStyp10" class="SrednStepenReakStyp10 SizeInput">
+						</td>
+						<td class="tr7td11">
+							<input type="text" name="SrednStepenReakStyp11" class="SrednStepenReakStyp11 SizeInput">
+						</td>
+						<td class="tr7td12">
+							<input type="text" name="SrednStepenReakStyp12" class="SrednStepenReakStyp12 SizeInput">
+						</td>
+						<td class="tr7td13">
+							<input type="text" name="SrednStepenReakStyp13" class="SrednStepenReakStyp13 SizeInput">
+						</td>
+						<td class="tr7td14">
+							<input type="text" name="SrednStepenReakStyp14" class="SrednStepenReakStyp14 SizeInput">
+						</td>
+						<td class="tr7td15">
+							<input type="text" name="SrednStepenReakStyp15" class="SrednStepenReakStyp15 SizeInput">
+						</td>
+						<td class="tr7td16">
+							<input type="text" name="SrednStepenReakStyp16" class="SrednStepenReakStyp16 SizeInput">
+						</td>
+						<td class="tr7td17">
+							<input type="text" name="SrednStepenReakStyp17" class="SrednStepenReakStyp17 SizeInput">
+						</td>
+						<td class="tr7td18">
+							<input type="text" name="SrednStepenReakStyp18" class="SrednStepenReakStyp18 SizeInput">
+						</td>
+						<td class="tr7td19">
+							<input type="text" name="SrednStepenReakStyp19" class="SrednStepenReakStyp19 SizeInput">
+						</td>
+						<td class="tr7td20">
+							<input type="text" name="SrednStepenReakStyp20" class="SrednStepenReakStyp20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS8 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="EffectYgol0" class="EffectYgol0 SizeInput InpColor">
+							<input type="text" name="VisotaSoplovLopatok0" class="VisotaSoplovLopatok0 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td1 Left Size1">
+							<input type="text" name="EffectYgol1" class="EffectYgol1 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok1" class="VisotaSoplovLopatok1 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td2">
+							<input type="text" name="EffectYgol2" class="EffectYgol2 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok2" class="VisotaSoplovLopatok2 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td3">
+							<input type="text" name="EffectYgol3" class="EffectYgol3 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok3" class="VisotaSoplovLopatok3 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td4">
+							<input type="text" name="EffectYgol4" class="EffectYgol4 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok4" class="VisotaSoplovLopatok4 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td5">
+							<input type="text" name="EffectYgol5" class="EffectYgol5 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok5" class="VisotaSoplovLopatok5 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td6">
+							<input type="text" name="EffectYgol6" class="EffectYgol6 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok6" class="VisotaSoplovLopatok6 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td7">
+							<input type="text" name="EffectYgol7" class="EffectYgol7 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok7" class="VisotaSoplovLopatok7 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td8">
+							<input type="text" name="EffectYgol8" class="EffectYgol8 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok8" class="VisotaSoplovLopatok8 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td9">
+							<input type="text" name="EffectYgol9" class="EffectYgol9 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok9" class="VisotaSoplovLopatok9 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td10">
+							<input type="text" name="EffectYgol10" class="EffectYgol10 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok10" class="VisotaSoplovLopatok10 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td11">
+							<input type="text" name="EffectYgol11" class="EffectYgol11 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok11" class="VisotaSoplovLopatok11 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td12">
+							<input type="text" name="EffectYgol12" class="EffectYgol12 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok12" class="VisotaSoplovLopatok12 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td13">
+							<input type="text" name="EffectYgol13" class="EffectYgol13 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok13" class="VisotaSoplovLopatok13 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td14">
+							<input type="text" name="EffectYgol14" class="EffectYgol14 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok14" class="VisotaSoplovLopatok14 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td15">
+							<input type="text" name="EffectYgol15" class="EffectYgol15 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok15" class="VisotaSoplovLopatok15 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td16">
+							<input type="text" name="EffectYgol16" class="EffectYgol16 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok16" class="VisotaSoplovLopatok16 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td17">
+							<input type="text" name="EffectYgol17" class="EffectYgol17 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok17" class="VisotaSoplovLopatok17 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td18">
+							<input type="text" name="EffectYgol18" class="EffectYgol18 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok18" class="VisotaSoplovLopatok18 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td19">
+							<input type="text" name="EffectYgol19" class="EffectYgol19 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok19" class="VisotaSoplovLopatok19 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr8td20">
+							<input type="text" name="EffectYgol20" class="EffectYgol20 SizeInput">
+							<input type="text" name="VisotaSoplovLopatok20" class="VisotaSoplovLopatok20 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS9 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="RaznostYglovRR0" class="RaznostYglovRR0 SizeInput InpColor">
+							<input type="text" name="VisotaRabochixLopatok0" class="VisotaRabochixLopatok0 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td1 Left Size1">
+							<input type="text" name="RaznostYglovRR1" class="RaznostYglovRR1 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok1" class="VisotaRabochixLopatok1 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td2">
+							<input type="text" name="RaznostYglovRR2" class="RaznostYglovRR2 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok2" class="VisotaRabochixLopatok2 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td3">
+							<input type="text" name="RaznostYglovRR3" class="RaznostYglovRR3 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok3" class="VisotaRabochixLopatok3 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td4">
+							<input type="text" name="RaznostYglovRR4" class="RaznostYglovRR4 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok4" class="VisotaRabochixLopatok4 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td5">
+							<input type="text" name="RaznostYglovRR5" class="RaznostYglovRR5 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok5" class="VisotaRabochixLopatok5 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td6">
+							<input type="text" name="RaznostYglovRR6" class="RaznostYglovRR6 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok6" class="VisotaRabochixLopatok6 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td7">
+							<input type="text" name="RaznostYglovRR7" class="RaznostYglovRR7 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok7" class="VisotaRabochixLopatok7 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td8">
+							<input type="text" name="RaznostYglovRR8" class="RaznostYglovRR8 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok8" class="VisotaRabochixLopatok8 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td9">
+							<input type="text" name="RaznostYglovRR9" class="RaznostYglovRR9 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok9" class="VisotaRabochixLopatok9 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td10">
+							<input type="text" name="RaznostYglovRR10" class="RaznostYglovRR10 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok10" class="VisotaRabochixLopatok10 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td11">
+							<input type="text" name="RaznostYglovRR11" class="RaznostYglovRR11 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok11" class="VisotaRabochixLopatok11 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td12">
+							<input type="text" name="RaznostYglovRR12" class="RaznostYglovRR12 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok12" class="VisotaRabochixLopatok12 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td13">
+							<input type="text" name="RaznostYglovRR13" class="RaznostYglovRR13 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok13" class="VisotaRabochixLopatok13 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td14">
+							<input type="text" name="RaznostYglovRR14" class="RaznostYglovRR14 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok14" class="VisotaRabochixLopatok14 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td15">
+							<input type="text" name="RaznostYglovRR15" class="RaznostYglovRR15 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok15" class="VisotaRabochixLopatok15 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td16">
+							<input type="text" name="RaznostYglovRR16" class="RaznostYglovRR16 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok16" class="VisotaRabochixLopatok16 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td17">
+							<input type="text" name="RaznostYglovRR17" class="RaznostYglovRR17 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok17" class="VisotaRabochixLopatok17 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td18">
+							<input type="text" name="RaznostYglovRR18" class="RaznostYglovRR18 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok18" class="VisotaRabochixLopatok18 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td19">
+							<input type="text" name="RaznostYglovRR19" class="RaznostYglovRR19 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok19" class="VisotaRabochixLopatok19 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+						<td class="tr9td20">
+							<input type="text" name="RaznostYglovRR20" class="RaznostYglovRR20 SizeInput">
+							<input type="text" name="VisotaRabochixLopatok20" class="VisotaRabochixLopatok20 SizeInput InpColor Shadow"><!--Скрытый Input-->
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS10 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ShirinaSL0" class="ShirinaSL0 SizeInput InpColor">
+						</td>
+						<td class="tr10td1 Left Size1">
+							<input type="text" name="ShirinaSL1" class="ShirinaSL1 SizeInput">
+						</td>
+						<td class="tr10td2">
+							<input type="text" name="ShirinaSL2" class="ShirinaSL2 SizeInput">
+						</td>
+						<td class="tr10td3">
+							<input type="text" name="ShirinaSL3" class="ShirinaSL3 SizeInput">
+						</td>
+						<td class="tr10td4">
+							<input type="text" name="ShirinaSL4" class="ShirinaSL4 SizeInput">
+						</td>
+						<td class="tr10td5">
+							<input type="text" name="ShirinaSL5" class="ShirinaSL5 SizeInput">
+						</td>
+						<td class="tr10td6">
+							<input type="text" name="ShirinaSL6" class="ShirinaSL6 SizeInput">
+						</td>
+						<td class="tr10td7">
+							<input type="text" name="ShirinaSL7" class="ShirinaSL7 SizeInput">
+						</td>
+						<td class="tr10td8">
+							<input type="text" name="ShirinaSL8" class="ShirinaSL8 SizeInput">
+						</td>
+						<td class="tr10td9">
+							<input type="text" name="ShirinaSL9" class="ShirinaSL9 SizeInput">
+						</td>
+						<td class="tr10td10">
+							<input type="text" name="ShirinaSL10" class="ShirinaSL10 SizeInput">
+						</td>
+						<td class="tr10td11">
+							<input type="text" name="ShirinaSL11" class="ShirinaSL11 SizeInput">
+						</td>
+						<td class="tr10td12">
+							<input type="text" name="ShirinaSL12" class="ShirinaSL12 SizeInput">
+						</td>
+						<td class="tr10td13">
+							<input type="text" name="ShirinaSL13" class="ShirinaSL13 SizeInput">
+						</td>
+						<td class="tr10td14">
+							<input type="text" name="ShirinaSL14" class="ShirinaSL14 SizeInput">
+						</td>
+						<td class="tr10td15">
+							<input type="text" name="ShirinaSL15" class="ShirinaSL15 SizeInput">
+						</td>
+						<td class="tr10td16">
+							<input type="text" name="ShirinaSL16" class="ShirinaSL16 SizeInput">
+						</td>
+						<td class="tr10td17">
+							<input type="text" name="ShirinaSL17" class="ShirinaSL17 SizeInput">
+						</td>
+						<td class="tr10td18">
+							<input type="text" name="ShirinaSL18" class="ShirinaSL18 SizeInput">
+						</td>
+						<td class="tr10td19">
+							<input type="text" name="ShirinaSL19" class="ShirinaSL19 SizeInput">
+						</td>
+						<td class="tr10td20">
+							<input type="text" name="ShirinaSL20" class="ShirinaSL20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS11 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ShirinaRL0" class="ShirinaRL0 SizeInput InpColor">
+						</td>
+						<td class="tr11td1 Left Size1">
+							<input type="text" name="ShirinaRL1" class="ShirinaRL1 SizeInput">
+						</td>
+						<td class="tr11td2">
+							<input type="text" name="ShirinaRL2" class="ShirinaRL2 SizeInput">
+						</td>
+						<td class="tr11td3">
+							<input type="text" name="ShirinaRL3" class="ShirinaRL3 SizeInput">
+						</td>
+						<td class="tr11td4">
+							<input type="text" name="ShirinaRL4" class="ShirinaRL4 SizeInput">
+						</td>
+						<td class="tr11td5">
+							<input type="text" name="ShirinaRL5" class="ShirinaRL5 SizeInput">
+						</td>
+						<td class="tr11td6">
+							<input type="text" name="ShirinaRL6" class="ShirinaRL6 SizeInput">
+						</td>
+						<td class="tr11td7">
+							<input type="text" name="ShirinaRL7" class="ShirinaRL7 SizeInput">
+						</td>
+						<td class="tr11td8">
+							<input type="text" name="ShirinaRL8" class="ShirinaRL8 SizeInput">
+						</td>
+						<td class="tr11td9">
+							<input type="text" name="ShirinaRL9" class="ShirinaRL9 SizeInput">
+						</td>
+						<td class="tr11td10">
+							<input type="text" name="ShirinaRL10" class="ShirinaRL10 SizeInput">
+						</td>
+						<td class="tr11td11">
+							<input type="text" name="ShirinaRL11" class="ShirinaRL11 SizeInput">
+						</td>
+						<td class="tr11td12">
+							<input type="text" name="ShirinaRL12" class="ShirinaRL12 SizeInput">
+						</td>
+						<td class="tr11td13">
+							<input type="text" name="ShirinaRL13" class="ShirinaRL13 SizeInput">
+						</td>
+						<td class="tr11td14">
+							<input type="text" name="ShirinaRL14" class="ShirinaRL14 SizeInput">
+						</td>
+						<td class="tr11td15">
+							<input type="text" name="ShirinaRL15" class="ShirinaRL15 SizeInput">
+						</td>
+						<td class="tr11td16">
+							<input type="text" name="ShirinaRL16" class="ShirinaRL16 SizeInput">
+						</td>
+						<td class="tr11td17">
+							<input type="text" name="ShirinaRL17" class="ShirinaRL17 SizeInput">
+						</td>
+						<td class="tr11td18">
+							<input type="text" name="ShirinaRL18" class="ShirinaRL18 SizeInput">
+						</td>
+						<td class="tr11td19">
+							<input type="text" name="ShirinaRL19" class="ShirinaRL19 SizeInput">
+						</td>
+						<td class="tr11td20">
+							<input type="text" name="ShirinaRL20" class="ShirinaRL20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS12 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="KoefficienCeparacii0" class="KoefficienCeparacii0 SizeInput InpColor">
+						</td>
+						<td class="tr12td1 Left Size1">
+							<input type="text" name="KoefficienCeparacii1" class="KoefficienCeparacii1 SizeInput">
+						</td>
+						<td class="tr12td2">
+							<input type="text" name="KoefficienCeparacii2" class="KoefficienCeparacii2 SizeInput">
+						</td>
+						<td class="tr12td3">
+							<input type="text" name="KoefficienCeparacii3" class="KoefficienCeparacii3 SizeInput">
+						</td>
+						<td class="tr12td4">
+							<input type="text" name="KoefficienCeparacii4" class="KoefficienCeparacii4 SizeInput">
+						</td>
+						<td class="tr12td5">
+							<input type="text" name="KoefficienCeparacii5" class="KoefficienCeparacii5 SizeInput">
+						</td>
+						<td class="tr12td6">
+							<input type="text" name="KoefficienCeparacii6" class="KoefficienCeparacii6 SizeInput">
+						</td>
+						<td class="tr12td7">
+							<input type="text" name="KoefficienCeparacii7" class="KoefficienCeparacii7 SizeInput">
+						</td>
+						<td class="tr12td8">
+							<input type="text" name="KoefficienCeparacii8" class="KoefficienCeparacii8 SizeInput">
+						</td>
+						<td class="tr12td9">
+							<input type="text" name="KoefficienCeparacii9" class="KoefficienCeparacii9 SizeInput">
+						</td>
+						<td class="tr12td10">
+							<input type="text" name="KoefficienCeparacii10" class="KoefficienCeparacii10 SizeInput">
+						</td>
+						<td class="tr12td11">
+							<input type="text" name="KoefficienCeparacii11" class="KoefficienCeparacii11 SizeInput">
+						</td>
+						<td class="tr12td12">
+							<input type="text" name="KoefficienCeparacii12" class="KoefficienCeparacii12 SizeInput">
+						</td>
+						<td class="tr12td13">
+							<input type="text" name="KoefficienCeparacii13" class="KoefficienCeparacii13 SizeInput">
+						</td>
+						<td class="tr12td14">
+							<input type="text" name="KoefficienCeparacii14" class="KoefficienCeparacii14 SizeInput">
+						</td>
+						<td class="tr12td15">
+							<input type="text" name="KoefficienCeparacii15" class="KoefficienCeparacii15 SizeInput">
+						</td>
+						<td class="tr12td16">
+							<input type="text" name="KoefficienCeparacii16" class="KoefficienCeparacii16 SizeInput">
+						</td>
+						<td class="tr12td17">
+							<input type="text" name="KoefficienCeparacii17" class="KoefficienCeparacii17 SizeInput">
+						</td>
+						<td class="tr12td18">
+							<input type="text" name="KoefficienCeparacii18" class="KoefficienCeparacii18 SizeInput">
+						</td>
+						<td class="tr12td19">
+							<input type="text" name="KoefficienCeparacii19" class="KoefficienCeparacii19 SizeInput">
+						</td>
+						<td class="tr12td20">
+							<input type="text" name="KoefficienCeparacii20" class="KoefficienCeparacii20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS13 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="VnytrenOtnositKPDstyp0" class="VnytrenOtnositKPDstyp0 SizeInput InpColor">
+						</td>
+						<td class="tr13td1 Left Size1">
+							<input type="text" name="VnytrenOtnositKPDstyp1" class="VnytrenOtnositKPDstyp1 SizeInput">
+						</td>
+						<td class="tr13td2">
+							<input type="text" name="VnytrenOtnositKPDstyp2" class="VnytrenOtnositKPDstyp2 SizeInput">
+						</td>
+						<td class="tr13td3">
+							<input type="text" name="VnytrenOtnositKPDstyp3" class="VnytrenOtnositKPDstyp3 SizeInput">
+						</td>
+						<td class="tr13td4">
+							<input type="text" name="VnytrenOtnositKPDstyp4" class="VnytrenOtnositKPDstyp4 SizeInput">
+						</td>
+						<td class="tr13td5">
+							<input type="text" name="VnytrenOtnositKPDstyp5" class="VnytrenOtnositKPDstyp5 SizeInput">
+						</td>
+						<td class="tr13td6">
+							<input type="text" name="VnytrenOtnositKPDstyp6" class="VnytrenOtnositKPDstyp6 SizeInput">
+						</td>
+						<td class="tr13td7">
+							<input type="text" name="VnytrenOtnositKPDstyp7" class="VnytrenOtnositKPDstyp7 SizeInput">
+						</td>
+						<td class="tr13td8">
+							<input type="text" name="VnytrenOtnositKPDstyp8" class="VnytrenOtnositKPDstyp8 SizeInput">
+						</td>
+						<td class="tr13td9">
+							<input type="text" name="VnytrenOtnositKPDstyp9" class="VnytrenOtnositKPDstyp9 SizeInput">
+						</td>
+						<td class="tr13td10">
+							<input type="text" name="VnytrenOtnositKPDstyp10" class="VnytrenOtnositKPDstyp10 SizeInput">
+						</td>
+						<td class="tr13td11">
+							<input type="text" name="VnytrenOtnositKPDstyp11" class="VnytrenOtnositKPDstyp11 SizeInput">
+						</td>
+						<td class="tr13td12">
+							<input type="text" name="VnytrenOtnositKPDstyp12" class="VnytrenOtnositKPDstyp12 SizeInput">
+						</td>
+						<td class="tr13td13">
+							<input type="text" name="VnytrenOtnositKPDstyp13" class="VnytrenOtnositKPDstyp13 SizeInput">
+						</td>
+						<td class="tr13td14">
+							<input type="text" name="VnytrenOtnositKPDstyp14" class="VnytrenOtnositKPDstyp14 SizeInput">
+						</td>
+						<td class="tr13td15">
+							<input type="text" name="VnytrenOtnositKPDstyp15" class="VnytrenOtnositKPDstyp15 SizeInput">
+						</td>
+						<td class="tr13td16">
+							<input type="text" name="VnytrenOtnositKPDstyp16" class="VnytrenOtnositKPDstyp16 SizeInput">
+						</td>
+						<td class="tr13td17">
+							<input type="text" name="VnytrenOtnositKPDstyp17" class="VnytrenOtnositKPDstyp17 SizeInput">
+						</td>
+						<td class="tr13td18">
+							<input type="text" name="VnytrenOtnositKPDstyp18" class="VnytrenOtnositKPDstyp18 SizeInput">
+						</td>
+						<td class="tr13td19">
+							<input type="text" name="VnytrenOtnositKPDstyp19" class="VnytrenOtnositKPDstyp19 SizeInput">
+						</td>
+						<td class="tr13td20">
+							<input type="text" name="VnytrenOtnositKPDstyp20" class="VnytrenOtnositKPDstyp20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS14 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="OsevoiZazorVKamere0" class="OsevoiZazorVKamere0 SizeInput InpColor">
+						</td>
+						<td class="tr14td1 Left Size1">
+							<input type="text" name="OsevoiZazorVKamere1" class="OsevoiZazorVKamere1 SizeInput">
+						</td>
+						<td class="tr14td2">
+							<input type="text" name="OsevoiZazorVKamere2" class="OsevoiZazorVKamere2 SizeInput">
+						</td>
+						<td class="tr14td3">
+							<input type="text" name="OsevoiZazorVKamere3" class="OsevoiZazorVKamere3 SizeInput">
+						</td>
+						<td class="tr14td4">
+							<input type="text" name="OsevoiZazorVKamere4" class="OsevoiZazorVKamere4 SizeInput">
+						</td>
+						<td class="tr14td5">
+							<input type="text" name="OsevoiZazorVKamere5" class="OsevoiZazorVKamere5 SizeInput">
+						</td>
+						<td class="tr14td6">
+							<input type="text" name="OsevoiZazorVKamere6" class="OsevoiZazorVKamere6 SizeInput">
+						</td>
+						<td class="tr14td7">
+							<input type="text" name="OsevoiZazorVKamere7" class="OsevoiZazorVKamere7 SizeInput">
+						</td>
+						<td class="tr14td8">
+							<input type="text" name="OsevoiZazorVKamere8" class="OsevoiZazorVKamere8 SizeInput">
+						</td>
+						<td class="tr14td9">
+							<input type="text" name="OsevoiZazorVKamere9" class="OsevoiZazorVKamere9 SizeInput">
+						</td>
+						<td class="tr14td10">
+							<input type="text" name="OsevoiZazorVKamere10" class="OsevoiZazorVKamere10 SizeInput">
+						</td>
+						<td class="tr14td11">
+							<input type="text" name="OsevoiZazorVKamere11" class="OsevoiZazorVKamere11 SizeInput">
+						</td>
+						<td class="tr14td12">
+							<input type="text" name="OsevoiZazorVKamere12" class="OsevoiZazorVKamere12 SizeInput">
+						</td>
+						<td class="tr14td13">
+							<input type="text" name="OsevoiZazorVKamere13" class="OsevoiZazorVKamere13 SizeInput">
+						</td>
+						<td class="tr14td14">
+							<input type="text" name="OsevoiZazorVKamere14" class="OsevoiZazorVKamere14 SizeInput">
+						</td>
+						<td class="tr14td15">
+							<input type="text" name="OsevoiZazorVKamere15" class="OsevoiZazorVKamere15 SizeInput">
+						</td>
+						<td class="tr14td16">
+							<input type="text" name="OsevoiZazorVKamere16" class="OsevoiZazorVKamere16 SizeInput">
+						</td>
+						<td class="tr14td17">
+							<input type="text" name="OsevoiZazorVKamere17" class="OsevoiZazorVKamere17 SizeInput">
+						</td>
+						<td class="tr14td18">
+							<input type="text" name="OsevoiZazorVKamere18" class="OsevoiZazorVKamere18 SizeInput">
+						</td>
+						<td class="tr14td19">
+							<input type="text" name="OsevoiZazorVKamere19" class="OsevoiZazorVKamere19 SizeInput">
+						</td>
+						<td class="tr14td20">
+							<input type="text" name="OsevoiZazorVKamere20" class="OsevoiZazorVKamere20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS15 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="DiametrDiafragYplotn0" class="DiametrDiafragYplotn0 SizeInput InpColor">
+						</td>
+						<td class="tr15td1 Left Size1">
+							<input type="text" name="DiametrDiafragYplotn1" class="DiametrDiafragYplotn1 SizeInput">
+						</td>
+						<td class="tr15td2">
+							<input type="text" name="DiametrDiafragYplotn2" class="DiametrDiafragYplotn2 SizeInput">
+						</td>
+						<td class="tr15td3">
+							<input type="text" name="DiametrDiafragYplotn3" class="DiametrDiafragYplotn3 SizeInput">
+						</td>
+						<td class="tr15td4">
+							<input type="text" name="DiametrDiafragYplotn4" class="DiametrDiafragYplotn4 SizeInput">
+						</td>
+						<td class="tr15td5">
+							<input type="text" name="DiametrDiafragYplotn5" class="DiametrDiafragYplotn5 SizeInput">
+						</td>
+						<td class="tr15td6">
+							<input type="text" name="DiametrDiafragYplotn6" class="DiametrDiafragYplotn6 SizeInput">
+						</td>
+						<td class="tr15td7">
+							<input type="text" name="DiametrDiafragYplotn7" class="DiametrDiafragYplotn7 SizeInput">
+						</td>
+						<td class="tr15td8">
+							<input type="text" name="DiametrDiafragYplotn8" class="DiametrDiafragYplotn8 SizeInput">
+						</td>
+						<td class="tr15td9">
+							<input type="text" name="DiametrDiafragYplotn9" class="DiametrDiafragYplotn9 SizeInput">
+						</td>
+						<td class="tr15td10">
+							<input type="text" name="DiametrDiafragYplotn10" class="DiametrDiafragYplotn10 SizeInput">
+						</td>
+						<td class="tr15td11">
+							<input type="text" name="DiametrDiafragYplotn11" class="DiametrDiafragYplotn11 SizeInput">
+						</td>
+						<td class="tr15td12">
+							<input type="text" name="DiametrDiafragYplotn12" class="DiametrDiafragYplotn12 SizeInput">
+						</td>
+						<td class="tr15td13">
+							<input type="text" name="DiametrDiafragYplotn13" class="DiametrDiafragYplotn13 SizeInput">
+						</td>
+						<td class="tr15td14">
+							<input type="text" name="DiametrDiafragYplotn14" class="DiametrDiafragYplotn14 SizeInput">
+						</td>
+						<td class="tr15td15">
+							<input type="text" name="DiametrDiafragYplotn15" class="DiametrDiafragYplotn15 SizeInput">
+						</td>
+						<td class="tr15td16">
+							<input type="text" name="DiametrDiafragYplotn16" class="DiametrDiafragYplotn16 SizeInput">
+						</td>
+						<td class="tr15td17">
+							<input type="text" name="DiametrDiafragYplotn17" class="DiametrDiafragYplotn17 SizeInput">
+						</td>
+						<td class="tr15td18">
+							<input type="text" name="DiametrDiafragYplotn18" class="DiametrDiafragYplotn18 SizeInput">
+						</td>
+						<td class="tr15td19">
+							<input type="text" name="DiametrDiafragYplotn19" class="DiametrDiafragYplotn19 SizeInput">
+						</td>
+						<td class="tr15td20">
+							<input type="text" name="DiametrDiafragYplotn20" class="DiametrDiafragYplotn20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS16 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ZazorDiafragYplotn0" class="ZazorDiafragYplotn0 SizeInput InpColor">
+						</td>
+						<td class="tr16td1 Left Size1">
+							<input type="text" name="ZazorDiafragYplotn1" class="ZazorDiafragYplotn1 SizeInput">
+						</td>
+						<td class="tr16td2">
+							<input type="text" name="ZazorDiafragYplotn2" class="ZazorDiafragYplotn2 SizeInput">
+						</td>
+						<td class="tr16td3">
+							<input type="text" name="ZazorDiafragYplotn3" class="ZazorDiafragYplotn3 SizeInput">
+						</td>
+						<td class="tr16td4">
+							<input type="text" name="ZazorDiafragYplotn4" class="ZazorDiafragYplotn4 SizeInput">
+						</td>
+						<td class="tr16td5">
+							<input type="text" name="ZazorDiafragYplotn5" class="ZazorDiafragYplotn5 SizeInput">
+						</td>
+						<td class="tr16td6">
+							<input type="text" name="ZazorDiafragYplotn6" class="ZazorDiafragYplotn6 SizeInput">
+						</td>
+						<td class="tr16td7">
+							<input type="text" name="ZazorDiafragYplotn7" class="ZazorDiafragYplotn7 SizeInput">
+						</td>
+						<td class="tr16td8">
+							<input type="text" name="ZazorDiafragYplotn8" class="ZazorDiafragYplotn8 SizeInput">
+						</td>
+						<td class="tr16td9">
+							<input type="text" name="ZazorDiafragYplotn9" class="ZazorDiafragYplotn9 SizeInput">
+						</td>
+						<td class="tr16td10">
+							<input type="text" name="ZazorDiafragYplotn10" class="ZazorDiafragYplotn10 SizeInput">
+						</td>
+						<td class="tr16td11">
+							<input type="text" name="ZazorDiafragYplotn11" class="ZazorDiafragYplotn11 SizeInput">
+						</td>
+						<td class="tr16td12">
+							<input type="text" name="ZazorDiafragYplotn12" class="ZazorDiafragYplotn12 SizeInput">
+						</td>
+						<td class="tr16td13">
+							<input type="text" name="ZazorDiafragYplotn13" class="ZazorDiafragYplotn13 SizeInput">
+						</td>
+						<td class="tr16td14">
+							<input type="text" name="ZazorDiafragYplotn14" class="ZazorDiafragYplotn14 SizeInput">
+						</td>
+						<td class="tr16td15">
+							<input type="text" name="ZazorDiafragYplotn15" class="ZazorDiafragYplotn15 SizeInput">
+						</td>
+						<td class="tr16td16">
+							<input type="text" name="ZazorDiafragYplotn16" class="ZazorDiafragYplotn16 SizeInput">
+						</td>
+						<td class="tr16td17">
+							<input type="text" name="ZazorDiafragYplotn17" class="ZazorDiafragYplotn17 SizeInput">
+						</td>
+						<td class="tr16td18">
+							<input type="text" name="ZazorDiafragYplotn18" class="ZazorDiafragYplotn18 SizeInput">
+						</td>
+						<td class="tr16td19">
+							<input type="text" name="ZazorDiafragYplotn19" class="ZazorDiafragYplotn19 SizeInput">
+						</td>
+						<td class="tr16td20">
+							<input type="text" name="ZazorDiafragYplotn20" class="ZazorDiafragYplotn20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS17 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ChisloGrebneiDiafragYplotn0" class="ChisloGrebneiDiafragYplotn0 SizeInput InpColor">
+						</td>
+						<td class="tr17td1 Left Size1">
+							<input type="text" name="ChisloGrebneiDiafragYplotn1" class="ChisloGrebneiDiafragYplotn1 SizeInput">
+						</td>
+						<td class="tr17td2">
+							<input type="text" name="ChisloGrebneiDiafragYplotn2" class="ChisloGrebneiDiafragYplotn2 SizeInput">
+						</td>
+						<td class="tr17td3">
+							<input type="text" name="ChisloGrebneiDiafragYplotn3" class="ChisloGrebneiDiafragYplotn3 SizeInput">
+						</td>
+						<td class="tr17td4">
+							<input type="text" name="ChisloGrebneiDiafragYplotn4" class="ChisloGrebneiDiafragYplotn4 SizeInput">
+						</td>
+						<td class="tr17td5">
+							<input type="text" name="ChisloGrebneiDiafragYplotn5" class="ChisloGrebneiDiafragYplotn5 SizeInput">
+						</td>
+						<td class="tr17td6">
+							<input type="text" name="ChisloGrebneiDiafragYplotn6" class="ChisloGrebneiDiafragYplotn6 SizeInput">
+						</td>
+						<td class="tr17td7">
+							<input type="text" name="ChisloGrebneiDiafragYplotn7" class="ChisloGrebneiDiafragYplotn7 SizeInput">
+						</td>
+						<td class="tr17td8">
+							<input type="text" name="ChisloGrebneiDiafragYplotn8" class="ChisloGrebneiDiafragYplotn8 SizeInput">
+						</td>
+						<td class="tr17td9">
+							<input type="text" name="ChisloGrebneiDiafragYplotn9" class="ChisloGrebneiDiafragYplotn9 SizeInput">
+						</td>
+						<td class="tr17td10">
+							<input type="text" name="ChisloGrebneiDiafragYplotn10" class="ChisloGrebneiDiafragYplotn10 SizeInput">
+						</td>
+						<td class="tr17td11">
+							<input type="text" name="ChisloGrebneiDiafragYplotn11" class="ChisloGrebneiDiafragYplotn11 SizeInput">
+						</td>
+						<td class="tr17td12">
+							<input type="text" name="ChisloGrebneiDiafragYplotn12" class="ChisloGrebneiDiafragYplotn12 SizeInput">
+						</td>
+						<td class="tr17td13">
+							<input type="text" name="ChisloGrebneiDiafragYplotn13" class="ChisloGrebneiDiafragYplotn13 SizeInput">
+						</td>
+						<td class="tr17td14">
+							<input type="text" name="ChisloGrebneiDiafragYplotn14" class="ChisloGrebneiDiafragYplotn14 SizeInput">
+						</td>
+						<td class="tr17td15">
+							<input type="text" name="ChisloGrebneiDiafragYplotn15" class="ChisloGrebneiDiafragYplotn15 SizeInput">
+						</td>
+						<td class="tr17td16">
+							<input type="text" name="ChisloGrebneiDiafragYplotn16" class="ChisloGrebneiDiafragYplotn16 SizeInput">
+						</td>
+						<td class="tr17td17">
+							<input type="text" name="ChisloGrebneiDiafragYplotn17" class="ChisloGrebneiDiafragYplotn17 SizeInput">
+						</td>
+						<td class="tr17td18">
+							<input type="text" name="ChisloGrebneiDiafragYplotn18" class="ChisloGrebneiDiafragYplotn18 SizeInput">
+						</td>
+						<td class="tr17td19">
+							<input type="text" name="ChisloGrebneiDiafragYplotn19" class="ChisloGrebneiDiafragYplotn19 SizeInput">
+						</td>
+						<td class="tr17td20">
+							<input type="text" name="ChisloGrebneiDiafragYplotn20" class="ChisloGrebneiDiafragYplotn20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS18 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="OsevoiZazorPerefYplotn0" class="OsevoiZazorPerefYplotn0 SizeInput InpColor">
+						</td>
+						<td class="tr18td1 Left Size1">
+							<input type="text" name="OsevoiZazorPerefYplotn1" class="OsevoiZazorPerefYplotn1 SizeInput">
+						</td>
+						<td class="tr18td2">
+							<input type="text" name="OsevoiZazorPerefYplotn2" class="OsevoiZazorPerefYplotn2 SizeInput">
+						</td>
+						<td class="tr18td3">
+							<input type="text" name="OsevoiZazorPerefYplotn3" class="OsevoiZazorPerefYplotn3 SizeInput">
+						</td>
+						<td class="tr18td4">
+							<input type="text" name="OsevoiZazorPerefYplotn4" class="OsevoiZazorPerefYplotn4 SizeInput">
+						</td>
+						<td class="tr18td5">
+							<input type="text" name="OsevoiZazorPerefYplotn5" class="OsevoiZazorPerefYplotn5 SizeInput">
+						</td>
+						<td class="tr18td6">
+							<input type="text" name="OsevoiZazorPerefYplotn6" class="OsevoiZazorPerefYplotn6 SizeInput">
+						</td>
+						<td class="tr18td7">
+							<input type="text" name="OsevoiZazorPerefYplotn7" class="OsevoiZazorPerefYplotn7 SizeInput">
+						</td>
+						<td class="tr18td8">
+							<input type="text" name="OsevoiZazorPerefYplotn8" class="OsevoiZazorPerefYplotn8 SizeInput">
+						</td>
+						<td class="tr18td9">
+							<input type="text" name="OsevoiZazorPerefYplotn9" class="OsevoiZazorPerefYplotn9 SizeInput">
+						</td>
+						<td class="tr18td10">
+							<input type="text" name="OsevoiZazorPerefYplotn10" class="OsevoiZazorPerefYplotn10 SizeInput">
+						</td>
+						<td class="tr18td11">
+							<input type="text" name="OsevoiZazorPerefYplotn11" class="OsevoiZazorPerefYplotn11 SizeInput">
+						</td>
+						<td class="tr18td12">
+							<input type="text" name="OsevoiZazorPerefYplotn12" class="OsevoiZazorPerefYplotn12 SizeInput">
+						</td>
+						<td class="tr18td13">
+							<input type="text" name="OsevoiZazorPerefYplotn13" class="OsevoiZazorPerefYplotn13 SizeInput">
+						</td>
+						<td class="tr18td14">
+							<input type="text" name="OsevoiZazorPerefYplotn14" class="OsevoiZazorPerefYplotn14 SizeInput">
+						</td>
+						<td class="tr18td15">
+							<input type="text" name="OsevoiZazorPerefYplotn15" class="OsevoiZazorPerefYplotn15 SizeInput">
+						</td>
+						<td class="tr18td16">
+							<input type="text" name="OsevoiZazorPerefYplotn16" class="OsevoiZazorPerefYplotn16 SizeInput">
+						</td>
+						<td class="tr18td17">
+							<input type="text" name="OsevoiZazorPerefYplotn17" class="OsevoiZazorPerefYplotn17 SizeInput">
+						</td>
+						<td class="tr18td18">
+							<input type="text" name="OsevoiZazorPerefYplotn18" class="OsevoiZazorPerefYplotn18 SizeInput">
+						</td>
+						<td class="tr18td19">
+							<input type="text" name="OsevoiZazorPerefYplotn19" class="OsevoiZazorPerefYplotn19 SizeInput">
+						</td>
+						<td class="tr18td20">
+							<input type="text" name="OsevoiZazorPerefYplotn20" class="OsevoiZazorPerefYplotn20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS19 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="RadialnyZazorPerefYplotn0" class="RadialnyZazorPerefYplotn0 SizeInput InpColor">
+						</td>
+						<td class="tr19td1 Left Size1">
+							<input type="text" name="RadialnyZazorPerefYplotn1" class="RadialnyZazorPerefYplotn1 SizeInput">
+						</td>
+						<td class="tr19td2">
+							<input type="text" name="RadialnyZazorPerefYplotn2" class="RadialnyZazorPerefYplotn2 SizeInput">
+						</td>
+						<td class="tr19td3">
+							<input type="text" name="RadialnyZazorPerefYplotn3" class="RadialnyZazorPerefYplotn3 SizeInput">
+						</td>
+						<td class="tr19td4">
+							<input type="text" name="RadialnyZazorPerefYplotn4" class="RadialnyZazorPerefYplotn4 SizeInput">
+						</td>
+						<td class="tr19td5">
+							<input type="text" name="RadialnyZazorPerefYplotn5" class="RadialnyZazorPerefYplotn5 SizeInput">
+						</td>
+						<td class="tr19td6">
+							<input type="text" name="RadialnyZazorPerefYplotn6" class="RadialnyZazorPerefYplotn6 SizeInput">
+						</td>
+						<td class="tr19td7">
+							<input type="text" name="RadialnyZazorPerefYplotn7" class="RadialnyZazorPerefYplotn7 SizeInput">
+						</td>
+						<td class="tr19td8">
+							<input type="text" name="RadialnyZazorPerefYplotn8" class="RadialnyZazorPerefYplotn8 SizeInput">
+						</td>
+						<td class="tr19td9">
+							<input type="text" name="RadialnyZazorPerefYplotn9" class="RadialnyZazorPerefYplotn9 SizeInput">
+						</td>
+						<td class="tr19td10">
+							<input type="text" name="RadialnyZazorPerefYplotn10" class="RadialnyZazorPerefYplotn10 SizeInput">
+						</td>
+						<td class="tr19td11">
+							<input type="text" name="RadialnyZazorPerefYplotn11" class="RadialnyZazorPerefYplotn11 SizeInput">
+						</td>
+						<td class="tr19td12">
+							<input type="text" name="RadialnyZazorPerefYplotn12" class="RadialnyZazorPerefYplotn12 SizeInput">
+						</td>
+						<td class="tr19td13">
+							<input type="text" name="RadialnyZazorPerefYplotn13" class="RadialnyZazorPerefYplotn13 SizeInput">
+						</td>
+						<td class="tr19td14">
+							<input type="text" name="RadialnyZazorPerefYplotn14" class="RadialnyZazorPerefYplotn14 SizeInput">
+						</td>
+						<td class="tr19td15">
+							<input type="text" name="RadialnyZazorPerefYplotn15" class="RadialnyZazorPerefYplotn15 SizeInput">
+						</td>
+						<td class="tr19td16">
+							<input type="text" name="RadialnyZazorPerefYplotn16" class="RadialnyZazorPerefYplotn16 SizeInput">
+						</td>
+						<td class="tr19td17">
+							<input type="text" name="RadialnyZazorPerefYplotn17" class="RadialnyZazorPerefYplotn17 SizeInput">
+						</td>
+						<td class="tr19td18">
+							<input type="text" name="RadialnyZazorPerefYplotn18" class="RadialnyZazorPerefYplotn18 SizeInput">
+						</td>
+						<td class="tr19td19">
+							<input type="text" name="RadialnyZazorPerefYplotn19" class="RadialnyZazorPerefYplotn19 SizeInput">
+						</td>
+						<td class="tr19td20">
+							<input type="text" name="RadialnyZazorPerefYplotn20" class="RadialnyZazorPerefYplotn20 SizeInput">
+						</td>
+					</tr>
+					<tr class="Left">
+						<td class="tdRS20 Left Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ChisloGrebnPerefYplotn0" class="ChisloGrebnPerefYplotn0 SizeInput InpColor">
+						</td>
+						<td class="tr20td1 Left Size1">
+							<input type="text" name="ChisloGrebnPerefYplotn1" class="ChisloGrebnPerefYplotn1 SizeInput">
+						</td>
+						<td class="tr20td2">
+							<input type="text" name="ChisloGrebnPerefYplotn2" class="ChisloGrebnPerefYplotn2 SizeInput">
+						</td>
+						<td class="tr20td3">
+							<input type="text" name="ChisloGrebnPerefYplotn3" class="ChisloGrebnPerefYplotn3 SizeInput">
+						</td>
+						<td class="tr20td4">
+							<input type="text" name="ChisloGrebnPerefYplotn4" class="ChisloGrebnPerefYplotn4 SizeInput">
+						</td>
+						<td class="tr20td5">
+							<input type="text" name="ChisloGrebnPerefYplotn5" class="ChisloGrebnPerefYplotn5 SizeInput">
+						</td>
+						<td class="tr20td6">
+							<input type="text" name="ChisloGrebnPerefYplotn6" class="ChisloGrebnPerefYplotn6 SizeInput">
+						</td>
+						<td class="tr20td7">
+							<input type="text" name="ChisloGrebnPerefYplotn7" class="ChisloGrebnPerefYplotn7 SizeInput">
+						</td>
+						<td class="tr20td8">
+							<input type="text" name="ChisloGrebnPerefYplotn8" class="ChisloGrebnPerefYplotn8 SizeInput">
+						</td>
+						<td class="tr20td9">
+							<input type="text" name="ChisloGrebnPerefYplotn9" class="ChisloGrebnPerefYplotn9 SizeInput">
+						</td>
+						<td class="tr20td10">
+							<input type="text" name="ChisloGrebnPerefYplotn10" class="ChisloGrebnPerefYplotn10 SizeInput">
+						</td>
+						<td class="tr20td11">
+							<input type="text" name="ChisloGrebnPerefYplotn11" class="ChisloGrebnPerefYplotn11 SizeInput">
+						</td>
+						<td class="tr20td12">
+							<input type="text" name="ChisloGrebnPerefYplotn12" class="ChisloGrebnPerefYplotn12 SizeInput">
+						</td>
+						<td class="tr20td13">
+							<input type="text" name="ChisloGrebnPerefYplotn13" class="ChisloGrebnPerefYplotn13 SizeInput">
+						</td>
+						<td class="tr20td14">
+							<input type="text" name="ChisloGrebnPerefYplotn14" class="ChisloGrebnPerefYplotn14 SizeInput">
+						</td>
+						<td class="tr20td15">
+							<input type="text" name="ChisloGrebnPerefYplotn15" class="ChisloGrebnPerefYplotn15 SizeInput">
+						</td>
+						<td class="tr20td16">
+							<input type="text" name="ChisloGrebnPerefYplotn16" class="ChisloGrebnPerefYplotn16 SizeInput">
+						</td>
+						<td class="tr20td17">
+							<input type="text" name="ChisloGrebnPerefYplotn17" class="ChisloGrebnPerefYplotn17 SizeInput">
+						</td>
+						<td class="tr20td18">
+							<input type="text" name="ChisloGrebnPerefYplotn18" class="ChisloGrebnPerefYplotn18 SizeInput">
+						</td>
+						<td class="tr20td19">
+							<input type="text" name="ChisloGrebnPerefYplotn19" class="ChisloGrebnPerefYplotn19 SizeInput">
+						</td>
+						<td class="tr20td20">
+							<input type="text" name="ChisloGrebnPerefYplotn20" class="ChisloGrebnPerefYplotn20 SizeInput">
+						</td>
+					</tr>
+					<tr class="LeftBottom RightBottom">
+						<td class="tdRS21 LeftBottom Size1 Shadow"><!--Скрытый блок 1РС-->
+							<input type="text" name="ImeuytLiLopatkiBandag0" class="ImeuytLiLopatkiBandag0 SizeInput InpColor">
+						</td>
+						<td class="tr21td1 LeftBottom Size1">
+							<input type="text" name="ImeuytLiLopatkiBandag1" class="ImeuytLiLopatkiBandag1 SizeInput">
+						</td>
+						<td class="tr21td2 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag2" class="ImeuytLiLopatkiBandag2 SizeInput">
+						</td>
+						<td class="tr21td3 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag3" class="ImeuytLiLopatkiBandag3 SizeInput">
+						</td>
+						<td class="tr21td4 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag4" class="ImeuytLiLopatkiBandag4 SizeInput">
+						</td>
+						<td class="tr21td5 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag5" class="ImeuytLiLopatkiBandag5 SizeInput">
+						</td>
+						<td class="tr21td6 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag6" class="ImeuytLiLopatkiBandag6 SizeInput">
+						</td>
+						<td class="tr21td7 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag7" class="ImeuytLiLopatkiBandag7 SizeInput">
+						</td>
+						<td class="tr21td8 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag8" class="ImeuytLiLopatkiBandag8 SizeInput">
+						</td>
+						<td class="tr21td9 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag9" class="ImeuytLiLopatkiBandag9 SizeInput">
+						</td>
+						<td class="tr21td10 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag10" class="ImeuytLiLopatkiBandag10 SizeInput">
+						</td>
+						<td class="tr21td11 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag11" class="ImeuytLiLopatkiBandag11 SizeInput">
+						</td>
+						<td class="tr21td12 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag12" class="ImeuytLiLopatkiBandag12 SizeInput">
+						</td>
+						<td class="tr21td13 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag13" class="ImeuytLiLopatkiBandag13 SizeInput">
+						</td>
+						<td class="tr21td14 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag14" class="ImeuytLiLopatkiBandag14 SizeInput">
+						</td>
+						<td class="tr21td15 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag15" class="ImeuytLiLopatkiBandag15 SizeInput">
+						</td>
+						<td class="tr21td16 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag16" class="ImeuytLiLopatkiBandag16 SizeInput">
+						</td>
+						<td class="tr21td17 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag17" class="ImeuytLiLopatkiBandag17 SizeInput">
+						</td>
+						<td class="tr21td18 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag18" class="ImeuytLiLopatkiBandag18 SizeInput">
+						</td>
+						<td class="tr21td19 Bottom">
+							<input type="text" name="ImeuytLiLopatkiBandag19" class="ImeuytLiLopatkiBandag19 SizeInput">
+						</td>
+						<td class="tr21td20 RightBottom">
+							<input type="text" name="ImeuytLiLopatkiBandag20" class="ImeuytLiLopatkiBandag20 SizeInput">
+						</td>
+					</tr>
+				   </form>	   
+				</table>
+			  </td>
+		  </tr>
+			
+		
+			
+			
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  1
+			  </td>
+			  <td>
+				  Расход пара через ступень
+			  </td>
+			  <td class="TextAlign">
+				  G
+			  </td>
+			  <td class="TextAlign">
+				  кг/с
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  2
+			  </td>
+			  <td>
+				  <span class="tdName21">Тепловой перепад ступени</span>
+				  <span class="tdName22 Shadow">Давление за ступенью</span>
+			  </td>
+			  <td class="TextAlign">
+				  <span class="tdObozn21">H<sub>0</sub><sup>ст</sup></span>
+				  <span class="tdObozn22 Shadow">p<sub>2</sub></span>
+			  </td>
+			  <td class="TextAlign">
+				  <span class="tdEdinIzmer21">кДж/кг</span>
+				  <span class="tdEdinIzmer22 Shadow">бар</span>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  3
+			  </td>
+			  <td>
+				  Парциальность ступени
+			  </td>
+			  <td class="TextAlign">
+				  e
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  4
+			  </td>
+			  <td>
+				  Отношение скоростей
+			  </td>
+			  <td class="TextAlign">
+				  U/c<sub>ф</sub>
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  5
+			  </td>
+			  <td>
+				  Средний диаметр СЛ
+			  </td>
+			  <td class="TextAlign">
+				  d<sub>ср1</sub>
+			  </td>
+			  <td class="TextAlign">
+				  м
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  6
+			  </td>
+			  <td>
+				  Средний диаметр РЛ
+			  </td>
+			  <td class="TextAlign">
+				  d<sub>ср2</sub>
+			  </td>
+			  <td class="TextAlign">
+				  м
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  7
+			  </td>			  
+			  <td>
+				  Средняя степень реакции ступени
+			  </td>
+			  <td class="TextAlign">
+				  R<sub>0</sub>
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  8
+			  </td>
+			  <td>
+				  <span class="tdName81">Эффективный угол выхода потока из СЛ</span>
+				  <span class="tdName82 Shadow">Высота сопловых лопаток</span>
+			  </td>
+			  <td class="TextAlign">
+				  <span class="tdObozn81">&alpha;<sub>1эф</sub></span>
+				  <span class="tdObozn82 Shadow">мм</span>
+			  </td>
+			  <td class="TextAlign">
+				  <span class="tdEdinIzmer81">град</span>
+				  <span class="tdEdinIzmer82 Shadow">мм</span>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  9
+			  </td>
+			  <td>
+				  <span class="tdName91">Разность углов для рабочей решётки</span>
+				  <span class="tdName92 Shadow">Высота рабочих лопаток</span>
+			  </td>
+			  <td class="TextAlign">
+				  <span class="tdObozn91">d&beta;</span>
+			      <span class="tdObozn92 Shadow">мм</span>
+			  </td>
+			  <td class="TextAlign">
+				  <span class="tdEdinIzmer91">град</span>
+				  <span class="tdEdinIzmer92 Shadow">мм</span>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  10
+			  </td>
+			  <td>
+				  Ширина сопловой лопатки
+			  </td>
+			  <td class="TextAlign">
+				  B1
+			  </td>
+			  <td class="TextAlign">
+				  мм
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  11
+			  </td>
+			  <td>
+				  Ширина рабочей лопатки
+			  </td>
+			  <td class="TextAlign">
+				  B2
+			  </td>
+			  <td class="TextAlign">
+				  мм
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  12
+			  </td>
+			  <td>
+				  Коэффициент сепарации
+			  </td>
+			  <td class="TextAlign">
+				  k<sub>сеп</sub>
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  13
+			  </td>
+			  <td>
+				  Внутренний относительный КПД ступени
+			  </td>
+			  <td class="TextAlign">
+				  КПД<sub>0i</sub>
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  14
+			  </td>
+			  <td>
+				  Осевой зазор в камере диска
+			  </td>
+			  <td class="TextAlign">
+				  s<sub>кд</sub>
+			  </td>
+			  <td class="TextAlign">
+				  мм
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  15
+			  </td>
+			  <td>
+				  Диаметр диафрагменного уплотнения
+			  </td>
+			  <td class="TextAlign">
+				  d<sub>д</sub>
+			  </td>
+			  <td class="TextAlign">
+				  м
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  16
+			  </td>
+			  <td>
+				  Зазор диафрагменного уплотнения
+			  </td>
+			  <td class="TextAlign">
+				  S<sub>диаф</sub>
+			  </td>
+			  <td class="TextAlign">
+				  мм
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  17
+			  </td>
+			  <td>
+				  Число гребней диафрагменного уплотнения
+			  </td>
+			  <td class="TextAlign">
+				  Z<sub>д</sub>
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  18
+			  </td>
+			  <td>
+				  Осевой зазор переферийного уплотнения
+			  </td>
+			  <td class="TextAlign">
+				  S<sub>опер</sub>
+			  </td>
+			  <td class="TextAlign">
+				  мм
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  19
+			  </td>
+			  <td>
+				  Радиальный зазор переферийного уплотнения
+			  </td>
+			  <td class="TextAlign">
+				  S<sub>рпер</sub>
+			  </td>
+			  <td class="TextAlign">
+				  мм
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  20
+			  </td>
+			  <td>
+				  Число гребней переферийного уплотнения
+			  </td>
+			  <td class="TextAlign">
+				  Z<sub>п</sub>
+			  </td>
+			  <td class="TextAlign">
+				  -
+			  </td>
+		  </tr>
+		  <tr>
+			  <td class="Size1 TextAlign">
+				  21
+			  </td>
+			  <td>
+				  Имеют ли лопатки бандаж?
+			  </td>
+			  <td class="TextAlign">
+				  Бандаж
+			  </td>
+			  <td class="TextAlign">
+				  да/нет
+			  </td>
+		  </tr>
+		</table>
+		</div>
+	   
+	   </fieldset>
+      </div>
+		 
+		 
+    </div>
+  </fieldset>
+ </div>   
+</div>
+	  
+<script src="scripts/PodrobScriptsShadow.js"></script>
+</body>
+
+</html>
